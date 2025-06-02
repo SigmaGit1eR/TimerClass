@@ -6,17 +6,14 @@ class Timer
 public:
     Timer();
 
-    // Основні функції
-    double getTime() const;                  // Поточний час у секундах
-    void start();                            // Запуск таймера
-    void pause();                            // Пауза таймера
-    void reset();                            // Скидання таймера
-    bool toggle();                           // Перемикач старт/пауза
-
-    // Додаткові функції
-    void adjustTime(double seconds);         // Відняти час
-    void setTime(double seconds);            // Встановити конкретний час
-
+    // Timer functions
+    double getTime() const;                 //returns the time that has already elapsed
+    void start();                           //starts the timer                                         
+    void pause();                           //stops the timer                    
+    void reset();                           //resets the timer
+    bool toggle();                          //switches the timer state (start/pause)
+    void adjustTime(double seconds);        //changes the time on the timer
+    void setTime(double seconds);           //sets the time on the timer
 private:
     bool isRun;
     sf::Clock timer;
